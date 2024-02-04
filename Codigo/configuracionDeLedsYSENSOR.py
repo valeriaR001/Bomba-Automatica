@@ -41,4 +41,4 @@ while True:
         LedMedio.off()
         LedMedioVacio.off()
         LedVacio.blink()
-        sleep(.1)
+        sleep(.2)
