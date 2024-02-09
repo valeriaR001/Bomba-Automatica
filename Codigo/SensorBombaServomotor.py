@@ -15,28 +15,28 @@ servo180 = AngularServo(21, min_pulse_width=.5/1000, max_pulse_width=2.3/1000, p
 while True:
     distancia = sensor.distance * 100
     print("distancia:", distancia)
-    if distancia < 4.5:
+    if distancia < 4.25:
         LedLleno.on()
         LedMedioLleno.off()
         LedMedio.off()
         LedMedioVacio.off()
         LedVacio.off()
         servo180.angle = -90
-    elif distancia >= 4.5 and distancia < 6:
+    elif distancia >= 4.25 and distancia < 7:
         LedLleno.off()
         LedMedioLleno.on()
         LedMedio.off()
         LedMedioVacio.off()
         LedVacio.off()
         servo180.angle = 2.5
-    elif distancia >= 6 and distancia < 8:
+    elif distancia >= 7 and distancia < 9:
         LedLleno.off()
         LedMedioLleno.off()
         LedMedio.on()
         LedMedioVacio.off()
         LedVacio.off()
         servo180.angle = 2.5
-    elif distancia >= 8 and distancia < 10:
+    elif distancia >= 9 and distancia < 11:
         LedLleno.off()
         LedMedioLleno.off()
         LedMedio.off()
