@@ -1,18 +1,14 @@
-from machine import Pin, PWM
-import utime
+from gpiozero import AngularServo
+from time import sleep
+from gpiozero.pins.pigpio import PiGPIOFactory
 
-MID = 1500000
-MIN = 1000000
-MAX = 2000000
+factory = PiGPIOFactory()
 
-pwm = PWM(0)
-pwm.freq(50)
-pwm.duty_ns(MID)
+servo180 = AngularServo(21, min_pulse_width=.5/1000, max_pulse_width=2.3/1000, pin_factory=factory)
 
-while True:
-    pwm.duty_ns(MIN)
-    utime.sleep(1)
-    pwm.duty_ns(MID)
-    utime.sleep(1)
-    pwm.duty_ns(MAX)
-    utime.sleep(1)
+
+for i in range(-90, 0, 50):
+    print(i)
+    servo180.angle = i
+    sleep(1)
+servo180.angle = 2.5 

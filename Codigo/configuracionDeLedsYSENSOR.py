@@ -11,7 +11,7 @@ sensor = DistanceSensor(echo=24, trigger=23)
 while True:
     distancia = sensor.distance * 100
     print ("distancia: ",distancia)
-    if(distancia < 4):
+    if(distancia < 4.5):
         LedLleno.on()
         LedMedioLleno.off()
         LedMedio.off()
