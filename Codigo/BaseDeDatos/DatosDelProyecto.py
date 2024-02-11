@@ -8,3 +8,4 @@ while True:
     print(f"Distancia: {InformacionDeLosSensores.distancia}")
     BaseDeDatosProyecto.GrabarFlujoYDistancia(InformacionDeLosSensores.flujo, InformacionDeLosSensores.distancia)
     sleep(5)
+    
