@@ -34,6 +34,7 @@ GPIO.add_event_detect(FLOW_SENSOR_PIN, GPIO.RISING, callback=pulse_callback)
 try:
     while True:
         distancia = sensor.distance * 100
+        print ("distancia: ",distancia)
         
         if pulses >= 8:
             servo180.angle = 2.5
