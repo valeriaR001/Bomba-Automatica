@@ -1,4 +1,4 @@
-import ProyectoFinal
+import Codigo.Pruebas.ProyectoFinal as ProyectoFinal
 
 def leerFlujoYDistancia():
     global flujo, distancia
